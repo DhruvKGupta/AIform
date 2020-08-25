@@ -1,0 +1,54 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - inform
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+entities:
+  - did_audit
+  - course
+  - feedback_IIT
+  - feedback_bot
+
+slots:
+  did_audit:
+    type: unfeaturized
+  course:
+    type: unfeaturized
+  feedback_IIT:
+    type: unfeaturized
+  feedback_bot:
+    type: text
+
+forms:
+  - audit_form
+  - review_form
+  
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you? Did you audit a course in this semester?"
+  - text: "Hello! I am a survey-bot. Did you audit any course?"
+
+  utter_ask_course:
+  - text: "Which course?"
+  - text: "Which course did you audit?"
+
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Goodbye!"
+  - text: "See you later"
+  - text: "Hope to see you later"
+  - text: "It was nice talking to you!"
+
+  utter_iamabot:
+  - text: "I am a bot, made by love :) ."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
